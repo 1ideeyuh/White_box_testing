@@ -1,10 +1,8 @@
-# 100% condition coverage: every atomic condition (year%4==0, year%100!=0, year%400==0)
-# is True and False at least once, in both the outer and the inner decision.
 # NOT 100% statement coverage: the 'return False' in the else of the outer decision never runs.
 # NOT 100% branch coverage: the outer decision (year%4==0) | (year%100!=0) is True for
-#   every test, so its False branch is never taken.
+# every test, so its False branch is never taken.
 import unittest
-from leap_year import Leap_Year
+from Leap_Year import Leap_Year
  
 class ConditionCoverageTests(unittest.TestCase):
     def test_2004(self):  self.assertTrue(Leap_Year(2004))    # A=T B=T

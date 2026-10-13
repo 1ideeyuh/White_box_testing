@@ -1,5 +1,5 @@
 import unittest
-import leap_year
+import Leap_Year
 
 # 100% statement coverage (both return statements run) but not 100% condition coverage
 #-b (year % 100 != 0) is never false
@@ -7,9 +7,9 @@ import leap_year
 
 class StatementCoverageTests(unittest.TestCase):
     def test_2004_leap(self):
-        self.assertTrue(leap_year.leap_year(2004))
+        self.assertTrue(Leap_Year.Leap_Year(2004))
     def test_2001_not_leap(self):
-        self.assertFalse(leap_year.leap_year(2001))
+        self.assertFalse(Leap_Year.Leap_Year(2001))
 
 if __name__ == "__main__":
     unittest.main()
